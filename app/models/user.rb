@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  # converts all emails to lower case enforcing unique constraint
+  before_save { self.email = email.downcase }
   #validates that name is present and length is less than 50
   validates(:name, presence: true, length: {maximum: 50})
   #validates that email is present and length is less than 256
