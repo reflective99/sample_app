@@ -1,14 +1,32 @@
 <div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+  <h1 class="title">Your gateway to adventurous dining!</h1>
 
   <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
+    Where do you want to eat?
   </h2>
+  
+  <div class="container">
+		<form method="POST">
+			<select>
+				<option>I don't care</option>
+				<option>Durham</option>
+				<option>Washington D.C</option>	
+			</select>
+		</form>
+	</div>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+	<h2>
+	  What kind of food do you want?
+	</h2>
+	<div class="container">
+  	<select class="selectpicker">
+  		<option>Doesn't matter</option>	
+  		<option>American</option>
+  		<option>Asian</option>
+  	</select>
+	</div>
+	<br/>
+	
+
+  <%= link_to "Feed Me!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
-
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
